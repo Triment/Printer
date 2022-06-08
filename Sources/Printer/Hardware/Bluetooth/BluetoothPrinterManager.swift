@@ -82,7 +82,7 @@ public class BluetoothPrinterManager {
 
     private let queue = DispatchQueue(label: "com.kevin.gong.printer")
 
-    private let centralManager: CBCentralManager
+    public var centralManager: CBCentralManager
 
     private let centralManagerDelegate = BluetoothCentralManagerDelegate(BluetoothPrinterManager.specifiedServices)
     private let peripheralDelegate = BluetoothPeripheralDelegate(BluetoothPrinterManager.specifiedServices, characteristics: BluetoothPrinterManager.specifiedCharacteristics)
